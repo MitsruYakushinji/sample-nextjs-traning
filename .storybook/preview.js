@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/react'
+import * as NextImage from 'next/image'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../src/themes'
-import * as NextImage from 'next/image'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -31,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
     color: #000000;
   }
 `
-
 // Themeの適用
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
